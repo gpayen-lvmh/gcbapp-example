@@ -18,4 +18,13 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'run', 'gcr.io/$PROJECT_ID/helloworld-image', 'sh', '/helloworld.sh' ]
 - name: gcr.io/cloud-builders/gcloud
-  args: ['beta', 'secrets', 'versions', 'access', '1' ,'--secret=test']
+  args:
+  - kms
+  - decrypt
+  - --ciphertext-file=credentials.json.enc
+  - --plaintext-file=credentials.json
+  - --location=global
+  - --keyring=guillaume
+  - --key=test
+- name: ubuntu
+  args: ['cat', 'credentials.json']
