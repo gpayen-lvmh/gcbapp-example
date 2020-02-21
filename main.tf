@@ -13,7 +13,7 @@ terraform {
 
 module "gc-storage" {
   source = "github.com/terraform-google-modules/terraform-google-cloud-storage"
-  names = ["1"]
+  names = ["1", "2", "3"]
   prefix = "gui-bucket"
   project_id = var.project
 }
