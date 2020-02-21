@@ -1,6 +1,6 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'pull', 'hashicorp/terraform' ]
+#- name: 'gcr.io/cloud-builders/docker'
+#  args: [ 'pull', 'hashicorp/terraform' ]
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
@@ -13,7 +13,7 @@ steps:
   - --key=test
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'run', '--env', 'GOOGLE_APPLICATION_CREDENTIALS=credentials.json', 'gcr.io/$PROJECT_ID/hashicorp/terraform', 'init' ]
+  args: [ 'run', '--env', 'GOOGLE_APPLICATION_CREDENTIALS=credentials.json', 'hashicorp/terraform', 'init' ]
 
 #- name: 'gcr.io/cloud-builders/gsutil'
 #  args: ['cp', 'gs://bucket-gui-datafusion-dev-europe-west1/cities.csv', '.']
