@@ -18,4 +18,4 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'run', 'gcr.io/$PROJECT_ID/helloworld-image', 'sh', '/helloworld.sh' ]
 - name: gcr.io/cloud-builders/gcloud
-  args: ['beta', 'secrets', 'versions', 'access', '1' ,'--secret="test"']
+  args: ['beta', 'secrets', 'versions', 'access', '1' ,'--secret=test']
