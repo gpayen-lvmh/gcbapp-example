@@ -15,6 +15,9 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'run', '--env', 'GOOGLE_APPLICATION_CREDENTIALS=credentials.json', 'hashicorp/terraform', 'init' ]
 
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'run', '--env', 'GOOGLE_APPLICATION_CREDENTIALS=credentials.json', 'hashicorp/terraform', 'plan' ]
+
 #- name: 'gcr.io/cloud-builders/gsutil'
 #  args: ['cp', 'gs://bucket-gui-datafusion-dev-europe-west1/cities.csv', '.']
 
