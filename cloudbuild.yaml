@@ -1,6 +1,4 @@
 steps:
-#- name: 'gcr.io/cloud-builders/docker'
-#  args: [ 'pull', 'hashicorp/terraform' ]
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
