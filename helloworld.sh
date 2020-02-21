@@ -13,4 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-echo "Hello my world! The time is $(date)."
+echo "Hello the world! The time is $(date)."
