@@ -15,5 +15,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/helloworld-image', '.' ]
-images:
-- 'gcr.io/$PROJECT_ID/helloworld-image'
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'run', 'helloworld-image', 'sh', '/helloworld.sh' ]
