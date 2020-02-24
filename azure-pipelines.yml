@@ -17,5 +17,5 @@ steps:
   inputs:
     TemplatePath: 'main.tf'
     Arguments: '--env GOOGLE_APPLICATION_CREDENTIALS=${mykey}'
-    InstallTerraform: false
+    InstallTerraform: true
     UseAzureSub: false
