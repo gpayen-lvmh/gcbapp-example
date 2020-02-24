@@ -14,6 +14,6 @@ pool:
 - task: Terraform@2
   inputs:
     TemplatePath: 'main.tf'
-    Arguments: '--env GOOGLE_APPLICATION_CREDENTIALS=${mykey}'
+    Arguments: '--env GOOGLE_APPLICATION_CREDENTIALS=test'
     InstallTerraform: false
     UseAzureSub: false
