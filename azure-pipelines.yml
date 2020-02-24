@@ -9,11 +9,13 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
 
 - task: Terraform@2
   inputs:
     TemplatePath: 'main.tf'
-    Arguments: '--env GOOGLE_APPLICATION_CREDENTIALS=test'
+    Arguments: '--env GOOGLE_APPLICATION_CREDENTIALS=${mykey}'
     InstallTerraform: false
     UseAzureSub: false
